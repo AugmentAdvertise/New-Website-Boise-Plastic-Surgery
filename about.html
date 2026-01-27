@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="US-AZ" name="geo.region"/><meta content="Scottsdale" name="geo.placename"/><meta content="33.452;-111.9266" name="geo.position"/><meta content="33.452, -111.9266" name="ICBM"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="#116dff" name="theme-color"/>
+<!-- Primary SEO Meta Tags -->
+<title>About Dr. Aldo Guerra | Board-Certified Plastic Surgeon Scottsdale</title>
+<meta content="Meet Dr. Aldo Guerra, board-certified plastic surgeon in Scottsdale with 15+ years experience. Harvard trained, FACS certified. Learn about our approach to plastic surgery." name="description"/>
+<meta content="Dr. Aldo Guerra plastic surgeon, board certified plastic surgeon Scottsdale, plastic surgeon credentials, plastic surgery experience" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="About Dr. Aldo Guerra | Board-Certified Plastic Surgeon" property="og:title"/>
+<meta content="Meet Dr. Aldo Guerra, board-certified plastic surgeon with 15+ years of experience creating natural, beautiful results." property="og:description"/>
+<!-- Canonical URL -->
+<link href="https://new-website-guerra-plastic-surgery.vercel.app/" rel="canonical"/>
+<!-- Favicon -->
+<link href="images/favicon.png" rel="icon" type="image/png"/><link href="manifest.json" rel="manifest"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="preload"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Main Stylesheet -->
+<link href="css/styles.css" rel="stylesheet"/>
+<!-- Additional About Page Styles -->
+<style>
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      border-radius: 12px;
+      box-shadow: var(--shadow-xl);
+      width: 100%;
+    }
+
+    .about-image-accent {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 200px;
+      height: 200px;
+      background: var(--color-secondary);
+      border-radius: 12px;
+      z-index: -1;
+    }
+
+    .about-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-content .subtitle {
+      font-size: 1.25rem;
+      color: var(--color-secondary);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .credentials-section {
+      background: var(--color-light-bg);
+    }
+
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .credential-card {
+      background: var(--color-white);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+
+    .credential-card i {
+      font-size: 3rem;
+      color: var(--color-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .credential-card h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .credential-card p {
+      color: var(--color-text-light);
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    .education-timeline {
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .education-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--color-secondary);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -3rem;
+      top: 0.25rem;
+      width: 16px;
+      height: 16px;
+      background: var(--color-secondary);
+      border-radius: 50%;
+      border: 3px solid var(--color-white);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-item h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-item .institution {
+      color: var(--color-secondary);
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-item p {
+      color: var(--color-text-light);
+      margin-bottom: 0;
+    }
+
+    .philosophy-section {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+      color: var(--color-white);
+    }
+
+    .philosophy-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .philosophy-content h2 {
+      color: var(--color-white);
+    }
+
+    .philosophy-content p {
+      font-size: 1.125rem;
+      opacity: 0.9;
+    }
+
+    .philosophy-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .philosophy-point h3 {
+      color: var(--color-secondary);
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .philosophy-point p {
+      font-size: 0.9375rem;
+    }
+
+    .memberships-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .memberships-logos img {
+      height: 60px;
+      width: auto;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: all var(--transition-fast);
+    }
+
+    .memberships-logos img:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 992px) {
+      .about-intro {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .about-image {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .credentials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .philosophy-points {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dr. Aldo Guerra",
+  "image": "https://new-website-guerra-plastic-surgery.vercel.app/images/dr-portrait.jpg",
+  "jobTitle": "Board-Certified Plastic Surgeon",
+  "medicalSpecialty": "PlasticSurgery",
+  "description": "Board-certified plastic surgeon with over 15 years of experience specializing in breast augmentation, facelifts, body contouring, and facial plastic surgery.",
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "Medical School"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "Residency Program"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "Fellowship Program"
+    }
+  ],
+  "memberOf": [
+    {
+      "@type": "Organization",
+      "name": "American Board of Plastic Surgery"
+    },
+    {
+      "@type": "Organization",
+      "name": "American College of Surgeons"
+    },
+    {
+      "@type": "Organization",
+      "name": "American Society of Plastic Surgeons"
+    },
+    {
+      "@type": "Organization",
+      "name": "American Society for Aesthetic Plastic Surgery"
+    }
+  ],
+  "worksFor": {
+    "@type": "PlasticSurgery",
+    "name": "Guerra Plastic Surgery Center",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6727 E Shea Blvd",
+      "addressLocality": "Scottsdale",
+      "addressRegion": "CA",
+      "postalCode": "85254"
+    }
+  }
+}</script>
+</head>
+<body>
+<!-- Top Bar -->
+<div class="top-bar">
+<div class="container">
+<div class="top-bar-content">
+<div class="top-bar-left">
+<a href="tel:4805682523"><i class="fas fa-phone"></i> (480) 568-2523</a>
+<span class="divider">|</span>
+<a href="mailto:info@guerraplasticsurgery.com"><i class="fas fa-envelope"></i> info@practice.com</a>
+</div>
+<div class="top-bar-right">
+<a aria-label="Facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="Instagram" href="#"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" href="#"><i class="fab fa-youtube"></i></a>
+<a aria-label="TikTok" href="#"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+</div>
+</div>
+<!-- Header / Navigation -->
+<header class="header" id="header">
+<div class="container">
+<nav class="nav">
+<a class="logo" href="index.html"><img alt="Logo" class="logo-img" src="images/logo.png" style="height: 50px; width: auto;"/></a>
+<button aria-expanded="false" aria-label="Toggle menu" class="mobile-menu-btn">
+<span class="hamburger"></span>
+</button>
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li class="has-dropdown">
+<a class="active" href="about.html">About <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="about.html">Meet Dr. Aldo Guerra</a></li>
+<li><a href="about.html#credentials">Credentials</a></li>
+<li><a href="about.html#philosophy">Our Philosophy</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a href="#">Breast <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="services/breast-augmentation.html">Breast Augmentation</a></li>
+<li><a href="services/breast-lift.html">Breast Lift</a></li>
+<li><a href="services/breast-reduction.html">Breast Reduction</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a href="#">Body <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="services/tummy-tuck.html">Tummy Tuck</a></li>
+<li><a href="services/liposuction.html">Liposuction</a></li>
+<li><a href="services/mommy-makeover.html">Mommy Makeover</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a href="#">Face <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="services/facelift.html">Facelift</a></li>
+<li><a href="services/rhinoplasty.html">Rhinoplasty</a></li>
+</ul>
+</li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a class="btn btn-primary nav-cta" href="contact.html">Book Consultation</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- Page Hero -->
+<section class="page-hero">
+<div class="container">
+<h1>About Dr. Aldo Guerra</h1>
+<nav aria-label="Breadcrumb" class="breadcrumb">
+<a href="index.html">Home</a>
+<span>/</span>
+<span>About</span>
+</nav>
+</div>
+</section>
+<!-- About Intro Section -->
+<section class="section">
+<div class="container">
+<div class="about-intro">
+<div class="about-image">
+<img alt="Aldo Guerra - Board Certified Plastic Surgeon" src="images/dr-portrait.jpg"/>
+<div class="about-image-accent"></div>
+</div>
+<div class="about-content">
+<h1>Dr. Aldo Guerra, MD, FACS</h1>
+<p class="subtitle">Board-Certified Plastic Surgeon</p>
+<p class="lead">With over 15 years of experience and thousands of successful procedures, Dr. Aldo Guerra has established himself as one of Scottsdale' most respected plastic surgeons, known for his meticulous technique and natural-looking results.</p>
+<p>Dr. Aldo Guerra's approach to plastic surgery combines surgical precision with an artistic eye, ensuring each patient receives personalized care tailored to their unique anatomy and aesthetic goals. He believes that the best results are those that enhance your natural beauty while looking completely natural.</p>
+<p>After completing his medical degree at Harvard Medical School, Dr. Aldo Guerra pursued rigorous training in general surgery at Johns Hopkins Hospital before completing his plastic surgery fellowship at UCLA Medical Center. This extensive training provided him with a comprehensive foundation in both reconstructive and aesthetic surgery.</p>
+<p>Today, Dr. Aldo Guerra specializes in breast augmentation, facelifts, rhinoplasty, body contouring, and mommy makeovers. He is committed to staying at the forefront of plastic surgery innovations, regularly attending conferences and incorporating the latest techniques to provide his patients with the safest, most effective procedures available.</p>
+<a class="btn btn-primary" href="contact.html" style="margin-top: 1rem;">Schedule a Consultation</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Credentials Section -->
+<section class="credentials-section section" id="credentials">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-label">Qualifications</span>
+<h2>Credentials &amp; Certifications</h2>
+</div>
+<div class="credentials-grid">
+<div class="credential-card">
+<i class="fas fa-certificate"></i>
+<h3>Board Certified</h3>
+<p>Certified by the American Board of Plastic Surgery, the gold standard in plastic surgery credentials.</p>
+</div>
+<div class="credential-card">
+<i class="fas fa-user-md"></i>
+<h3>FACS Designation</h3>
+<p>Fellow of the American College of Surgeons, recognizing the highest standards of surgical practice.</p>
+</div>
+<div class="credential-card">
+<i class="fas fa-award"></i>
+<h3>ASPS Member</h3>
+<p>Active member of the American Society of Plastic Surgeons, the largest plastic surgery organization.</p>
+</div>
+</div>
+<!-- Education Timeline -->
+<div style="margin-top: 4rem;">
+<h3 style="text-align: center; margin-bottom: 2rem;">Education &amp; Training</h3>
+<div class="education-timeline" style="max-width: 600px; margin: 0 auto;">
+<div class="timeline-item">
+<h3>Plastic Surgery Fellowship</h3>
+<p class="institution">UCLA Medical Center</p>
+<p>Advanced training in aesthetic and reconstructive plastic surgery</p>
+</div>
+<div class="timeline-item">
+<h3>General Surgery Residency</h3>
+<p class="institution">Johns Hopkins Hospital</p>
+<p>Comprehensive surgical training at a world-renowned institution</p>
+</div>
+<div class="timeline-item">
+<h3>Medical Degree (MD)</h3>
+<p class="institution">Harvard Medical School</p>
+<p>Graduated with honors from one of the nation's top medical schools</p>
+</div>
+<div class="timeline-item">
+<h3>Bachelor of Science</h3>
+<p class="institution">Stanford University</p>
+<p>Pre-medical studies with focus on biology and chemistry</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="philosophy-section section" id="philosophy">
+<div class="container">
+<div class="philosophy-content">
+<span class="section-label light">Our Approach</span>
+<h2>The Guerra Philosophy</h2>
+<p>At Guerra Plastic Surgery Center, we believe that exceptional results come from a combination of surgical expertise, artistic vision, and genuine care for each patient's well-being. Dr. Aldo Guerra takes the time to understand your goals and works with you to create a personalized treatment plan that achieves natural-looking, beautiful results.</p>
+<div class="philosophy-points">
+<div class="philosophy-point">
+<h3>Patient-Centered Care</h3>
+<p>Your comfort, safety, and satisfaction are our top priorities from consultation through recovery.</p>
+</div>
+<div class="philosophy-point">
+<h3>Natural Results</h3>
+<p>We enhance your natural beauty rather than change who you are, creating results that look like the best version of you.</p>
+</div>
+<div class="philosophy-point">
+<h3>Surgical Excellence</h3>
+<p>We utilize the most advanced techniques and technologies to ensure optimal outcomes and safety.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Memberships Section -->
+<section class="section">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-label">Professional Memberships</span>
+<h2>Professional Affiliations</h2>
+<p class="section-subtitle">Dr. Aldo Guerra maintains active memberships in the leading plastic surgery organizations.</p>
+</div>
+<div class="memberships-logos">
+<img alt="Board Certification" src="images/certificaiton-1.jpg"/>
+<img alt="Professional Certification" src="images/certification-2.webp"/>
+<img alt="Medical Association" src="images/certification-3.png"/>
+<img alt="Surgical Society" src="images/certificaiton-4.jpg"/>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="cta section">
+<div class="container">
+<div class="cta-content text-center">
+<h2>Ready to Meet Dr. Aldo Guerra?</h2>
+<p>Schedule your private consultation today and discover how we can help you achieve your aesthetic goals.</p>
+<div class="cta-buttons">
+<a class="btn btn-primary btn-lg" href="contact.html">Book Your Consultation</a>
+<a class="btn btn-outline-light btn-lg" href="tel:4805682523"><i class="fas fa-phone"></i> (480) 568-2523</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-about">
+<a class="footer-logo" href="index.html"><img alt="Logo" class="logo-img" src="images/logo.png" style="height: 50px; width: auto;"/></a>
+<p>Transforming lives through artistry and excellence. Board-certified plastic surgery in Scottsdale.</p>
+<div class="footer-social">
+<a aria-label="Facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="Instagram" href="#"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" href="#"><i class="fab fa-youtube"></i></a>
+<a aria-label="TikTok" href="#"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+<div class="footer-links">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="about.html">About Dr. Aldo Guerra</a></li>
+<li><a href="gallery.html">Before &amp; After</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="financing.html">Financing</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h4>Popular Procedures</h4>
+<ul>
+<li><a href="services/breast-augmentation.html">Breast Augmentation</a></li>
+<li><a href="services/tummy-tuck.html">Tummy Tuck</a></li>
+<li><a href="services/facelift.html">Facelift</a></li>
+<li><a href="services/rhinoplasty.html">Rhinoplasty</a></li>
+</ul>
+</div>
+<div class="footer-contact">
+<h4>Contact Us</h4>
+<address>
+<p><i class="fas fa-map-marker-alt"></i> 6727 E Shea Blvd<br/>Scottsdale, AZ 85254</p>
+<p><i class="fas fa-phone"></i> <a href="tel:4805682523">(480) 568-2523</a></p>
+<p><i class="fas fa-envelope"></i> <a href="mailto:info@guerraplasticsurgery.com">info@guerraplasticsurgery.com</a></p>
+</address>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-bottom-content">
+<p>© <span id="currentYear"></span> Guerra Plastic Surgery Center. All Rights Reserved.</p>
+<ul class="footer-legal">
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms of Service</a></li>
+</ul>
+</div>
+<p class="disclaimer">The information on this website is for general information purposes only. Results may vary. Please consult with a board-certified plastic surgeon for personalized recommendations.</p>
+</div>
+</div>
+</footer>
+<!-- Back to Top -->
+<a aria-label="Back to top" class="back-to-top" href="#">
+<i class="fas fa-chevron-up"></i>
+</a>
+<!-- Scripts -->
+<script src="config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

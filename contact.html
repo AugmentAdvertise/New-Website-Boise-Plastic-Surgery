@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="US-AZ" name="geo.region"/><meta content="Scottsdale" name="geo.placename"/><meta content="33.452;-111.9266" name="geo.position"/><meta content="33.452, -111.9266" name="ICBM"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="#116dff" name="theme-color"/>
+<!-- Primary SEO Meta Tags -->
+<title>Contact Us | Guerra Plastic Surgery Center Scottsdale - Dr. Aldo Guerra</title>
+<meta content="Schedule your consultation with board-certified plastic surgeon Dr. Aldo Guerra in Scottsdale. Call (480) 568-2523 or fill out our contact form." name="description"/>
+<meta content="plastic surgery consultation Scottsdale, contact plastic surgeon, schedule consultation, Dr. Aldo Guerra contact" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Contact Guerra Plastic Surgery Center Scottsdale" property="og:title"/>
+<meta content="Schedule your consultation with board-certified plastic surgeon Dr. Aldo Guerra." property="og:description"/>
+<!-- Canonical URL -->
+<link href="https://new-website-guerra-plastic-surgery.vercel.app/" rel="canonical"/>
+<!-- Favicon -->
+<link href="images/favicon.png" rel="icon" type="image/png"/><link href="manifest.json" rel="manifest"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="preload"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Main Stylesheet -->
+<link href="css/styles.css" rel="stylesheet"/>
+<!-- Additional Contact Page Styles -->
+<style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-form-wrapper {
+      background: var(--color-white);
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-form-wrapper h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form-wrapper p {
+      color: var(--color-text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--color-primary);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 1px solid var(--color-gray-300);
+      border-radius: 6px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      transition: all var(--transition-fast);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-secondary);
+      box-shadow: 0 0 0 3px rgba(201, 169, 89, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-submit {
+      margin-top: 1rem;
+    }
+
+    .form-submit .btn {
+      width: 100%;
+    }
+
+    .contact-info-wrapper h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info-card {
+      background: var(--color-light-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info-card h3 {
+      font-size: 1.125rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info-card h3 i {
+      color: var(--color-secondary);
+      font-size: 1.25rem;
+    }
+
+    .contact-info-card p {
+      margin-bottom: 0.5rem;
+      color: var(--color-text-light);
+    }
+
+    .contact-info-card a {
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+
+    .contact-info-card a:hover {
+      color: var(--color-secondary);
+    }
+
+    .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 1.5rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+
+    .virtual-consult-banner {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+      color: var(--color-white);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .virtual-consult-banner h3 {
+      color: var(--color-white);
+      margin-bottom: 0.5rem;
+    }
+
+    .virtual-consult-banner p {
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-wrapper {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Guerra Plastic Surgery Center",
+  "description": "Schedule a consultation with Dr. Aldo Guerra, board-certified plastic surgeon in Scottsdale",
+  "mainEntity": {
+    "@type": "PlasticSurgery",
+    "name": "Guerra Plastic Surgery Center",
+    "telephone": "(480) 568-2523",
+    "email": "info@practice.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6727 E Shea Blvd",
+      "addressLocality": "Scottsdale",
+      "addressRegion": "CA",
+      "postalCode": "85254"
+    }
+  }
+}</script>
+</head>
+<body>
+<!-- Top Bar -->
+<div class="top-bar">
+<div class="container">
+<div class="top-bar-content">
+<div class="top-bar-left">
+<a href="tel:4805682523"><i class="fas fa-phone"></i> (480) 568-2523</a>
+<span class="divider">|</span>
+<a href="mailto:info@guerraplasticsurgery.com"><i class="fas fa-envelope"></i> info@practice.com</a>
+</div>
+<div class="top-bar-right">
+<a aria-label="Facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="Instagram" href="#"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" href="#"><i class="fab fa-youtube"></i></a>
+<a aria-label="TikTok" href="#"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+</div>
+</div>
+<!-- Header / Navigation -->
+<header class="header" id="header">
+<div class="container">
+<nav class="nav">
+<a class="logo" href="index.html"><img alt="Logo" class="logo-img" src="images/logo.png" style="height: 50px; width: auto;"/></a>
+<button aria-expanded="false" aria-label="Toggle menu" class="mobile-menu-btn">
+<span class="hamburger"></span>
+</button>
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li class="has-dropdown">
+<a href="about.html">About <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="about.html">Meet Dr. Aldo Guerra</a></li>
+<li><a href="about.html#credentials">Credentials</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a href="#">Breast <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="services/breast-augmentation.html">Breast Augmentation</a></li>
+<li><a href="services/breast-lift.html">Breast Lift</a></li>
+<li><a href="services/breast-reduction.html">Breast Reduction</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a href="#">Body <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="services/tummy-tuck.html">Tummy Tuck</a></li>
+<li><a href="services/liposuction.html">Liposuction</a></li>
+<li><a href="services/mommy-makeover.html">Mommy Makeover</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a href="#">Face <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="services/facelift.html">Facelift</a></li>
+<li><a href="services/rhinoplasty.html">Rhinoplasty</a></li>
+</ul>
+</li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a class="active" href="contact.html">Contact</a></li>
+<li><a class="btn btn-primary nav-cta" href="contact.html">Book Consultation</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- Page Hero -->
+<section class="page-hero">
+<div class="container">
+<h1>Contact Us</h1>
+<nav aria-label="Breadcrumb" class="breadcrumb">
+<a href="index.html">Home</a>
+<span>/</span>
+<span>Contact</span>
+</nav>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="section">
+<div class="container">
+<div class="contact-grid">
+<!-- Contact Form -->
+<div class="contact-form-wrapper">
+<h2>Schedule Your Consultation</h2>
+<p>Fill out the form below and our patient coordinator will contact you within 24 hours to schedule your private consultation.</p>
+<form action="#" id="contactForm" method="POST">
+<div class="form-row">
+<div class="form-group">
+<label for="firstName">First Name *</label>
+<input id="firstName" name="firstName" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="lastName">Last Name *</label>
+<input id="lastName" name="lastName" required="" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="email">Email *</label>
+<input id="email" name="email" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="phone">Phone *</label>
+<input id="phone" name="phone" required="" type="tel"/>
+</div>
+</div>
+<div class="form-group">
+<label for="procedure">Procedure of Interest</label>
+<select id="procedure" name="procedure">
+<option value="">Select a procedure...</option>
+<optgroup label="Breast">
+<option value="breast-augmentation">Breast Augmentation</option>
+<option value="breast-lift">Breast Lift</option>
+<option value="breast-reduction">Breast Reduction</option>
+<option value="breast-revision">Breast Revision</option>
+</optgroup>
+<optgroup label="Body">
+<option value="tummy-tuck">Tummy Tuck</option>
+<option value="liposuction">Liposuction</option>
+<option value="mommy-makeover">Mommy Makeover</option>
+<option value="body-lift">Body Lift</option>
+</optgroup>
+<optgroup label="Face">
+<option value="facelift">Facelift</option>
+<option value="rhinoplasty">Rhinoplasty</option>
+<option value="eyelid-surgery">Eyelid Surgery</option>
+<option value="brow-lift">Brow Lift</option>
+</optgroup>
+<option value="other">Other / Not Sure</option>
+</select>
+</div>
+<div class="form-group">
+<label for="preferredContact">Preferred Contact Method</label>
+<select id="preferredContact" name="preferredContact">
+<option value="phone">Phone</option>
+<option value="email">Email</option>
+<option value="text">Text Message</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message">Tell Us About Your Goals</label>
+<textarea id="message" name="message" placeholder="Please share any details about your aesthetic goals or questions you may have..."></textarea>
+</div>
+<div class="form-group">
+<label style="display: flex; align-items: flex-start; gap: 0.5rem; font-weight: normal; cursor: pointer;">
+<input name="consent" required="" style="width: auto; margin-top: 0.25rem;" type="checkbox"/>
+<span style="font-size: 0.875rem; color: var(--color-text-light);">I consent to receiving communications from Guerra Plastic Surgery Center. I understand my information will be kept confidential.</span>
+</label>
+</div>
+<div class="form-submit">
+<button class="btn btn-primary btn-lg" type="submit">Request Consultation</button>
+</div>
+</form>
+</div>
+<!-- Contact Info -->
+<div class="contact-info-wrapper">
+<h2>Get In Touch</h2>
+<div class="contact-info-card">
+<h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+<p><strong>Guerra Plastic Surgery Center</strong></p>
+<p>6727 E Shea Blvd</p>
+<p>Scottsdale, AZ 85254</p>
+<p style="margin-top: 0.75rem;"><a href="https://maps.google.com" rel="noopener" target="_blank">Get Directions <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i></a></p>
+</div>
+<div class="contact-info-card">
+<h3><i class="fas fa-phone"></i> Phone</h3>
+<p><a href="tel:4805682523">(480) 568-2523</a></p>
+<p style="font-size: 0.875rem;">Available during office hours</p>
+</div>
+<div class="contact-info-card">
+<h3><i class="fas fa-envelope"></i> Email</h3>
+<p><a href="mailto:info@guerraplasticsurgery.com">info@guerraplasticsurgery.com</a></p>
+<p style="font-size: 0.875rem;">We respond within 24 hours</p>
+</div>
+<div class="contact-info-card">
+<h3><i class="fas fa-clock"></i> Office Hours</h3>
+<p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+<p>Saturday: By Appointment Only</p>
+<p>Sunday: Closed</p>
+</div>
+<div class="map-container">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d-111.9266!3d33.452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z33.4520,-111.9266!5e0!3m2!1sen!2sus!4v1234567890" title="Guerra Plastic Surgery Center Location"></iframe>
+</div>
+<div class="virtual-consult-banner">
+<h3><i class="fas fa-video"></i> Virtual Consultations Available</h3>
+<p>Can't make it to our office? We offer virtual consultations for your convenience.</p>
+<a class="btn btn-outline-light" href="tel:4805682523">Schedule Virtual Consult</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-about">
+<a class="footer-logo" href="index.html"><img alt="Logo" class="logo-img" src="images/logo.png" style="height: 50px; width: auto;"/></a>
+<p>Transforming lives through artistry and excellence. Board-certified plastic surgery in Scottsdale.</p>
+<div class="footer-social">
+<a aria-label="Facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="Instagram" href="#"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" href="#"><i class="fab fa-youtube"></i></a>
+<a aria-label="TikTok" href="#"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+<div class="footer-links">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="about.html">About Dr. Aldo Guerra</a></li>
+<li><a href="gallery.html">Before &amp; After</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="financing.html">Financing</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h4>Popular Procedures</h4>
+<ul>
+<li><a href="services/breast-augmentation.html">Breast Augmentation</a></li>
+<li><a href="services/breast-lift.html">Breast Lift</a></li>
+<li><a href="services/tummy-tuck.html">Tummy Tuck</a></li>
+<li><a href="services/facelift.html">Facelift</a></li>
+</ul>
+</div>
+<div class="footer-contact">
+<h4>Contact Us</h4>
+<address>
+<p><i class="fas fa-map-marker-alt"></i> 6727 E Shea Blvd<br/>Scottsdale, AZ 85254</p>
+<p><i class="fas fa-phone"></i> <a href="tel:4805682523">(480) 568-2523</a></p>
+<p><i class="fas fa-envelope"></i> <a href="mailto:info@guerraplasticsurgery.com">info@guerraplasticsurgery.com</a></p>
+</address>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-bottom-content">
+<p>© <span id="currentYear"></span> Guerra Plastic Surgery Center. All Rights Reserved.</p>
+<ul class="footer-legal">
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms of Service</a></li>
+</ul>
+</div>
+<p class="disclaimer">The information on this website is for general information purposes only. Results may vary. Please consult with a board-certified plastic surgeon for personalized recommendations.</p>
+</div>
+</div>
+</footer>
+<!-- Back to Top -->
+<a aria-label="Back to top" class="back-to-top" href="#">
+<i class="fas fa-chevron-up"></i>
+</a>
+<!-- Scripts -->
+<script src="config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Guerra Plastic Surgery Center",
+  "short_name": "Guerra",
+  "description": "Board-certified plastic surgery in Scottsdale, AZ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#116dff",
+  "icons": [
+    {
+      "src": "images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

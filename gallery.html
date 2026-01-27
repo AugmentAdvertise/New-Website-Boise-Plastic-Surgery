@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="US-AZ" name="geo.region"/><meta content="Scottsdale" name="geo.placename"/><meta content="33.452;-111.9266" name="geo.position"/><meta content="33.452, -111.9266" name="ICBM"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="#116dff" name="theme-color"/>
+<!-- Primary SEO Meta Tags -->
+<title>Before &amp; After Gallery | Guerra Plastic Surgery Center Scottsdale</title>
+<meta content="View real before and after photos from Guerra Plastic Surgery Center in Scottsdale. See transformative results from breast augmentation, tummy tuck, facelift, rhinoplasty and more." name="description"/>
+<meta content="plastic surgery before after photos, breast augmentation results, tummy tuck before after, facelift results, rhinoplasty before after Scottsdale" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Before &amp; After Gallery | Guerra Plastic Surgery Center" property="og:title"/>
+<meta content="View real before and after photos from our plastic surgery procedures. See the transformative results achieved by our patients." property="og:description"/>
+<!-- Canonical URL -->
+<link href="https://new-website-guerra-plastic-surgery.vercel.app/" rel="canonical"/>
+<!-- Favicon -->
+<link href="images/favicon.png" rel="icon" type="image/png"/><link href="manifest.json" rel="manifest"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="preload"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Main Stylesheet -->
+<link href="css/styles.css" rel="stylesheet"/>
+<!-- Gallery Page Styles -->
+<style>
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .filter-btn {
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--color-gray-300);
+      background: var(--color-white);
+      color: var(--color-text);
+      border-radius: 50px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: var(--color-primary);
+      background: var(--color-primary);
+      color: var(--color-white);
+    }
+
+    .gallery-page-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .gallery-card {
+      background: var(--color-white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-base);
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .gallery-card-image {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+
+    .gallery-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-base);
+    }
+
+    .gallery-card:hover .gallery-card-image img {
+      transform: scale(1.05);
+    }
+
+    .gallery-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(26,54,93,0.8) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+    }
+
+    .gallery-card:hover .gallery-card-overlay {
+      opacity: 1;
+    }
+
+    .gallery-card-overlay span {
+      color: var(--color-white);
+      font-weight: 600;
+    }
+
+    .gallery-card-content {
+      padding: 1.25rem;
+    }
+
+    .gallery-card-content h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-card-content p {
+      color: var(--color-text-light);
+      font-size: 0.9375rem;
+      margin-bottom: 0;
+    }
+
+    .gallery-card-tag {
+      display: inline-block;
+      background: var(--color-light-bg);
+      color: var(--color-primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+      position: relative;
+    }
+
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 85vh;
+      border-radius: 8px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: var(--color-white);
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 10000;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      transition: background var(--transition-fast);
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .lightbox-caption {
+      text-align: center;
+      color: var(--color-white);
+      margin-top: 1rem;
+      font-size: 1.125rem;
+    }
+
+    .gallery-disclaimer {
+      text-align: center;
+      max-width: 800px;
+      margin: 3rem auto 0;
+      padding: 1.5rem;
+      background: var(--color-light-bg);
+      border-radius: 12px;
+      color: var(--color-text-light);
+      font-size: 0.875rem;
+    }
+
+    .gallery-disclaimer i {
+      color: var(--color-secondary);
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 992px) {
+      .gallery-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .gallery-page-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-filters {
+        gap: 0.5rem;
+      }
+
+      .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Top Bar -->
+<div class="top-bar">
+<div class="container">
+<div class="top-bar-content">
+<div class="top-bar-left">
+<a href="tel:4805682523"><i class="fas fa-phone"></i> (480) 568-2523</a>
+<span class="divider">|</span>
+<a href="mailto:info@guerraplasticsurgery.com"><i class="fas fa-envelope"></i> info@practice.com</a>
+</div>
+<div class="top-bar-right">
+<a aria-label="Facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="Instagram" href="#"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" href="#"><i class="fab fa-youtube"></i></a>
+<a aria-label="TikTok" href="#"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+</div>
+</div>
+<!-- Header / Navigation -->
+<header class="header" id="header">
+<div class="container">
+<nav class="nav">
+<a class="logo" href="index.html"><img alt="Logo" class="logo-img" src="images/logo.png" style="height: 50px; width: auto;"/></a>
+<button aria-expanded="false" aria-label="Toggle menu" class="mobile-menu-btn">
+<span class="hamburger"></span>
+</button>
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li class="has-dropdown">
+<a href="about.html">About <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="about.html">Meet Dr. Aldo Guerra</a></li>
+<li><a href="about.html#credentials">Credentials</a></li>
+<li><a href="about.html#philosophy">Our Philosophy</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a href="#">Breast <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="services/breast-augmentation.html">Breast Augmentation</a></li>
+<li><a href="services/breast-lift.html">Breast Lift</a></li>
+<li><a href="services/breast-reduction.html">Breast Reduction</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a href="#">Body <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="services/tummy-tuck.html">Tummy Tuck</a></li>
+<li><a href="services/liposuction.html">Liposuction</a></li>
+<li><a href="services/mommy-makeover.html">Mommy Makeover</a></li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a href="#">Face <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="services/facelift.html">Facelift</a></li>
+<li><a href="services/rhinoplasty.html">Rhinoplasty</a></li>
+</ul>
+</li>
+<li><a class="active" href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a class="btn btn-primary nav-cta" href="contact.html">Book Consultation</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- Page Hero -->
+<section class="page-hero">
+<div class="container">
+<h1>Before &amp; After Gallery</h1>
+<nav aria-label="Breadcrumb" class="breadcrumb">
+<a href="index.html">Home</a>
+<span>/</span>
+<span>Gallery</span>
+</nav>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="section">
+<div class="container">
+<div class="section-header text-center">
+<span class="section-label">Real Results</span>
+<h2>Patient Transformations</h2>
+<p class="section-subtitle">Browse our gallery of real patient results. Click on any image to view larger.</p>
+</div>
+<!-- Filter Buttons -->
+<div class="gallery-filters">
+<button class="filter-btn active" data-filter="all">All Procedures</button>
+<button class="filter-btn" data-filter="breast">Breast</button>
+<button class="filter-btn" data-filter="body">Body</button>
+<button class="filter-btn" data-filter="face">Face</button>
+</div>
+<!-- Gallery Grid -->
+<div class="gallery-page-grid">
+<!-- Breast Augmentation -->
+<div class="gallery-card" data-category="breast">
+<div class="gallery-card-image">
+<img alt="Breast Augmentation Before and After" loading="lazy" src="images/augmentation.jpg"/>
+<div class="gallery-card-overlay">
+<span><i class="fas fa-search-plus"></i> View Larger</span>
+</div>
+</div>
+<div class="gallery-card-content">
+<span class="gallery-card-tag">Breast</span>
+<h3>Breast Augmentation</h3>
+<p>Natural-looking enhancement with silicone implants</p>
+</div>
+</div>
+<!-- Tummy Tuck -->
+<div class="gallery-card" data-category="body">
+<div class="gallery-card-image">
+<img alt="Tummy Tuck Before and After" loading="lazy" src="images/tummy-example.jpg"/>
+<div class="gallery-card-overlay">
+<span><i class="fas fa-search-plus"></i> View Larger</span>
+</div>
+</div>
+<div class="gallery-card-content">
+<span class="gallery-card-tag">Body</span>
+<h3>Tummy Tuck</h3>
+<p>Dramatic abdominal contouring and muscle repair</p>
+</div>
+</div>
+<!-- Facelift -->
+<div class="gallery-card" data-category="face">
+<div class="gallery-card-image">
+<img alt="Facelift Before and After" loading="lazy" src="images/face-lift.jpeg"/>
+<div class="gallery-card-overlay">
+<span><i class="fas fa-search-plus"></i> View Larger</span>
+</div>
+</div>
+<div class="gallery-card-content">
+<span class="gallery-card-tag">Face</span>
+<h3>Facelift</h3>
+<p>Natural rejuvenation with long-lasting results</p>
+</div>
+</div>
+<!-- Rhinoplasty -->
+<div class="gallery-card" data-category="face">
+<div class="gallery-card-image">
+<img alt="Rhinoplasty Before and After" loading="lazy" src="images/nose-job.jpeg"/>
+<div class="gallery-card-overlay">
+<span><i class="fas fa-search-plus"></i> View Larger</span>
+</div>
+</div>
+<div class="gallery-card-content">
+<span class="gallery-card-tag">Face</span>
+<h3>Rhinoplasty</h3>
+<p>Refined nasal contour with improved profile</p>
+</div>
+</div>
+<!-- Mommy Makeover -->
+<div class="gallery-card" data-category="body">
+<div class="gallery-card-image">
+<img alt="Mommy Makeover Before and After" loading="lazy" src="images/mommy-makeover.jpg"/>
+<div class="gallery-card-overlay">
+<span><i class="fas fa-search-plus"></i> View Larger</span>
+</div>
+</div>
+<div class="gallery-card-content">
+<span class="gallery-card-tag">Body</span>
+<h3>Mommy Makeover</h3>
+<p>Comprehensive post-pregnancy restoration</p>
+</div>
+</div>
+<!-- Breast Lift -->
+<div class="gallery-card" data-category="breast">
+<div class="gallery-card-image">
+<img alt="Breast Lift Before and After" loading="lazy" src="images/breast-augmentation.jpg"/>
+<div class="gallery-card-overlay">
+<span><i class="fas fa-search-plus"></i> View Larger</span>
+</div>
+</div>
+<div class="gallery-card-content">
+<span class="gallery-card-tag">Breast</span>
+<h3>Breast Lift</h3>
+<p>Restored youthful breast position and shape</p>
+</div>
+</div>
+<!-- Liposuction -->
+<div class="gallery-card" data-category="body">
+<div class="gallery-card-image">
+<img alt="Liposuction Before and After" loading="lazy" src="images/tummy-tuck.jpg"/>
+<div class="gallery-card-overlay">
+<span><i class="fas fa-search-plus"></i> View Larger</span>
+</div>
+</div>
+<div class="gallery-card-content">
+<span class="gallery-card-tag">Body</span>
+<h3>Liposuction</h3>
+<p>Targeted fat removal for improved contours</p>
+</div>
+</div>
+<!-- Facelift 2 -->
+<div class="gallery-card" data-category="face">
+<div class="gallery-card-image">
+<img alt="Facelift Before and After" loading="lazy" src="images/facelift.jpg"/>
+<div class="gallery-card-overlay">
+<span><i class="fas fa-search-plus"></i> View Larger</span>
+</div>
+</div>
+<div class="gallery-card-content">
+<span class="gallery-card-tag">Face</span>
+<h3>Facelift</h3>
+<p>Subtle lift with natural-looking results</p>
+</div>
+</div>
+<!-- Breast Augmentation 2 -->
+<div class="gallery-card" data-category="breast">
+<div class="gallery-card-image">
+<img alt="Breast Augmentation Before and After" loading="lazy" src="images/augmentation.jpg"/>
+<div class="gallery-card-overlay">
+<span><i class="fas fa-search-plus"></i> View Larger</span>
+</div>
+</div>
+<div class="gallery-card-content">
+<span class="gallery-card-tag">Breast</span>
+<h3>Breast Augmentation</h3>
+<p>Custom implant selection for natural results</p>
+</div>
+</div>
+</div>
+<!-- Disclaimer -->
+<div class="gallery-disclaimer">
+<p><i class="fas fa-info-circle"></i> <strong>Individual results may vary.</strong> All photos are of actual patients who have given consent for their images to be displayed. Results depicted are not guaranteed and depend on individual factors including health, body type, and adherence to post-operative instructions.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="cta section">
+<div class="container">
+<div class="cta-content text-center">
+<h2>Ready to See Your Own Transformation?</h2>
+<p>Schedule your private consultation with Dr. Aldo Guerra today and discover what's possible for you.</p>
+<div class="cta-buttons">
+<a class="btn btn-primary btn-lg" href="contact.html">Book Your Consultation</a>
+<a class="btn btn-outline-light btn-lg" href="sms:4805682523"><i class="fas fa-comment-sms"></i> Text Us Now</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-about">
+<a class="footer-logo" href="index.html"><img alt="Logo" class="logo-img" src="images/logo.png" style="height: 50px; width: auto;"/></a>
+<p>Transforming lives through artistry and excellence. Board-certified plastic surgery in Scottsdale.</p>
+<div class="footer-social">
+<a aria-label="Facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+<a aria-label="Instagram" href="#"><i class="fab fa-instagram"></i></a>
+<a aria-label="YouTube" href="#"><i class="fab fa-youtube"></i></a>
+<a aria-label="TikTok" href="#"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+<div class="footer-links">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="about.html">About Dr. Aldo Guerra</a></li>
+<li><a href="gallery.html">Before &amp; After</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="financing.html">Financing</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h4>Popular Procedures</h4>
+<ul>
+<li><a href="services/breast-augmentation.html">Breast Augmentation</a></li>
+<li><a href="services/tummy-tuck.html">Tummy Tuck</a></li>
+<li><a href="services/facelift.html">Facelift</a></li>
+<li><a href="services/rhinoplasty.html">Rhinoplasty</a></li>
+</ul>
+</div>
+<div class="footer-contact">
+<h4>Contact Us</h4>
+<address>
+<p><i class="fas fa-map-marker-alt"></i> 6727 E Shea Blvd<br/>Scottsdale, AZ 85254</p>
+<p><i class="fas fa-phone"></i> <a href="tel:4805682523">(480) 568-2523</a></p>
+<p><i class="fas fa-envelope"></i> <a href="mailto:info@guerraplasticsurgery.com">info@guerraplasticsurgery.com</a></p>
+</address>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-bottom-content">
+<p>© <span id="currentYear"></span> Guerra Plastic Surgery Center. All Rights Reserved.</p>
+<ul class="footer-legal">
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms of Service</a></li>
+</ul>
+</div>
+<p class="disclaimer">The information on this website is for general information purposes only. Results may vary. Please consult with a board-certified plastic surgeon for personalized recommendations.</p>
+</div>
+</div>
+</footer>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+<span class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></span>
+<div class="lightbox-content">
+<img alt="" id="lightbox-img" src=""/>
+<p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+</div>
+<!-- Back to Top -->
+<a aria-label="Back to top" class="back-to-top" href="#">
+<i class="fas fa-chevron-up"></i>
+</a>
+<!-- Floating Text Us Button -->
+<a aria-label="Text us" class="text-us-btn" href="sms:4805682523">
+<i class="fas fa-comment-sms"></i>
+<span>Text Us</span>
+</a>
+<!-- Scripts -->
+<script src="config.js"></script>
+<script src="js/main.js"></script>
+<!-- Gallery Scripts -->
+<script>
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryCards = document.querySelectorAll('.gallery-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter cards
+        const filter = btn.dataset.filter;
+        galleryCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    galleryCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('img');
+        const title = card.querySelector('h3').textContent;
+
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = title;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+</html>

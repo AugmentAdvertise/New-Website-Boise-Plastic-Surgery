@@ -1,0 +1,11 @@
+# robots.txt for https://new-website-guerra-plastic-surgery.vercel.app
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://new-website-guerra-plastic-surgery.vercel.app/sitemap.xml
+
+# Disallow admin/private areas
+Disallow: /.vercel/
+Disallow: /.git/
+Disallow: /.env*
