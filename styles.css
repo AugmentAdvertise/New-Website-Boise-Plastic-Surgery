@@ -7,21 +7,21 @@
    ============================================ */
 :root {
   /* Colors - Easily customizable */
-  --color-primary: #337ab7;
-  --color-primary-dark: #265b89;
-  --color-primary-light: #5b94c5;
-  --color-secondary: #5bc0de;
-  --color-secondary-dark: #4899b1;
-  --color-accent: #3c763d;
+  --color-primary: #504755;
+  --color-primary-dark: #3d3e49;
+  --color-primary-light: #6b5e70;
+  --color-secondary: #b1824a;
+  --color-secondary-dark: #966b3a;
+  --color-accent: #bda552;
   --color-text: #333333;
   --color-text-light: #666666;
   --color-text-muted: #999999;
   --color-white: #ffffff;
-  --color-light-bg: #f8f9fa;
+  --color-light-bg: #f2f0f6;
   --color-gray-100: #f5f5f5;
   --color-gray-200: #eeeeee;
   --color-gray-300: #dddddd;
-  --color-dark-bg: #337ab7;
+  --color-dark-bg: #4C656C;
 
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -530,7 +530,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(26,54,93,0.75) 0%, rgba(26,54,93,0.5) 100%);
+  background: linear-gradient(to right, rgba(80,71,85,0.75) 0%, rgba(80,71,85,0.5) 100%);
 }
 
 .hero-content {
@@ -777,7 +777,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(26,54,93,0.9) 0%, transparent 50%);
+  background: linear-gradient(to top, rgba(80,71,85,0.9) 0%, transparent 50%);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -961,7 +961,7 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(26,54,93,0.9) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(80,71,85,0.9) 0%, transparent 100%);
   color: var(--color-white);
   padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-sm);
   font-size: 0.9375rem;
@@ -1613,7 +1613,7 @@ p {
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.9375rem;
-  box-shadow: 0 4px 15px rgba(26, 54, 93, 0.4);
+  box-shadow: 0 4px 15px rgba(80, 71, 85, 0.4);
   transition: all var(--transition-base);
   z-index: 998;
   animation: pulse-glow 2s ease-in-out infinite;
@@ -1621,10 +1621,10 @@ p {
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 4px 15px rgba(26, 54, 93, 0.4);
+    box-shadow: 0 4px 15px rgba(80, 71, 85, 0.4);
   }
   50% {
-    box-shadow: 0 4px 25px rgba(26, 54, 93, 0.6), 0 0 30px rgba(26, 54, 93, 0.3);
+    box-shadow: 0 4px 25px rgba(80, 71, 85, 0.6), 0 0 30px rgba(80, 71, 85, 0.3);
   }
 }
 
@@ -1636,7 +1636,7 @@ p {
   background-color: var(--color-primary-dark);
   color: var(--color-white);
   transform: translateY(-3px);
-  box-shadow: 0 6px 25px rgba(26, 54, 93, 0.6);
+  box-shadow: 0 6px 25px rgba(80, 71, 85, 0.6);
   animation: none;
 }
 
