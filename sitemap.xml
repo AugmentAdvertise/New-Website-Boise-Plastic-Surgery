@@ -1,128 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/about.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/about.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/contact.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/contact.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/gallery.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/gallery.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Breast Procedures -->
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/breast-augmentation.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/breast-augmentation.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/breast-lift.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/breast-reduction.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/breast-implant-revision.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/rhinoplasty.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/breast-implant-removal.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- Face Procedures -->
+  <url>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/facelift.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/neck-lift.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/bbl.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/eyelid-surgery.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/thigh-lift.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/brow-lift.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/breast-implant-removal.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/chin-surgery.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- Body Procedures -->
+  <url>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/tummy-tuck.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/liposuction.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/mommy-makeover.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/body-contouring.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/body-lift.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/arm-lift.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/facelift.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/thigh-lift.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/liposuction.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/bra-line-back-lift.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/tummy-tuck.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/neck-lift.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/brow-lift.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/breast-lift.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/chin-augmentation.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/eyelid-surgery.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/mommy-makeover.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/breast-reduction.html</loc>
-    <lastmod>2026-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://new-website-guerra-plastic-surgery.vercel.app/services/arm-lift.html</loc>
-    <lastmod>2026-01-27</lastmod>
+    <loc>https://new-website-boise-plastic-surgery.vercel.app/services/male-breast-reduction.html</loc>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

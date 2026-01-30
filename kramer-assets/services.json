@@ -1,0 +1,36 @@
+{
+  "face": [
+    "Brow Lift",
+    "Chin Surgery",
+    "Eyelid Surgery",
+    "Facelift",
+    "Neck Lift"
+  ],
+  "breast": [
+    "Breast Augmentation",
+    "Breast Lift",
+    "Breast Implant Revision",
+    "Breast Reduction"
+  ],
+  "body": [
+    "Arm Lift",
+    "Body Contouring After Weight Loss",
+    "Bra Line Back Lift",
+    "Liposuction",
+    "Thigh Lift",
+    "Tummy Tuck",
+    "Mommy Makeover",
+    "Male Breast Reduction"
+  ],
+  "nonSurgical": [
+    "Botox Cosmetic",
+    "Dermal Fillers",
+    "CoolSculpting & CoolTone",
+    "Laser Skin Resurfacing",
+    "Laser Hair Removal",
+    "Chemical Peels",
+    "UPNEEQ Eyelid Drops",
+    "FemiLift Vaginal Rejuvenation",
+    "Skin Care Products"
+  ]
+}
